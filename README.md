@@ -12,3 +12,6 @@ Welcome to Ziglings-std! This project (will) contain a series of tiny broken pro
 	* [ ] Standard Datastructures (e.g. Hash maps, FIFO, ...)
 	* [ ] Iterator patterns
 	* [ ] Reader/Writer patterns
+
+# Inspiration
+[The original ziglings](https://github.com/ratfactor/ziglings)
