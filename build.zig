@@ -35,7 +35,6 @@ const Exercise = struct {
 
     /// Returns the key of the main file, the string before the '_' with
     /// "zero padding" removed.
-    /// For example, "001_hello.zig" has the key "1".
     pub fn key(self: Exercise) []const u8 {
         const end_index = std.mem.indexOfScalar(u8, self.main_file, '_');
         assert(end_index != null); // main file must be key_description.zig
@@ -50,6 +49,21 @@ const Exercise = struct {
 const exercises = [_]Exercise{
     .{
         .main_file = "001_general_purpose_allocator.zig",
+        .output = "Output",
+        .hint = "This is going to become a hint",
+    },
+    .{
+        .main_file = "002_page_allocator.zig",
+        .output = "Output",
+        .hint = "This is going to become a hint",
+    },
+    .{
+        .main_file = "003_fixed_buffer_allocator.zig",
+        .output = "Output",
+        .hint = "This is going to become a hint",
+    },
+    .{
+        .main_file = "004_arena_allocator.zig",
         .output = "Output",
         .hint = "This is going to become a hint",
     },
