@@ -1,4 +1,5 @@
 //
+//
 
 const std = @import("std");
 const heap = std.heap;
@@ -9,15 +10,12 @@ const SomeImportantHeapObject = struct {
 };
 
 pub fn main() !void {
-    // First create an object of the page allocator
-    const pa = heap.page_allocator;
-
-    // Get the allocator instance
-    var allocator = pa.allocator();
+    // Initiate the C Allocator
+    const allocator = heap.c_allocator;
 
     // Allocate our important heap object
     var heap_object = allocator.create(SomeImportantHeapObject);
-    
+
     // Register the free call for the heap object
     defer allocator.destroy();
 

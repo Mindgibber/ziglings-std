@@ -1,6 +1,11 @@
-// 
-// 
+// In Zig allocations are handled natively different than in most languages,
+// as you can see allocators have to be specifically chosen for each allocation.
 
+// Once such allocator would be the General Purpose Allocator, which is a 'safe' allocator,
+// and can prevent double-free, use-after-free and can also detect leaks.
+
+
+// This General Purpose Allocator can also be configured with the following parameters of the config struct below:
 // pub const Config = struct {
 //     stack_trace_frames: usize = default_stack_trace_frames,
 //     enable_memory_limit: bool = false,
@@ -30,7 +35,7 @@ pub fn main() !void {
     // Allocate our important heap object
     var heap_object = allocator.create(SomeImportantHeapObject);
 
-    // Register the free call for the heap object
+    // Defer the free call for the heap object
     defer allocator.destroy();
 
     // Derefence the heap object and initialize the struct
