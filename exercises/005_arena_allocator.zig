@@ -19,7 +19,7 @@ pub fn main() !void {
     const arena = heap.ArenaAllocator.init();
 
     // Get the allocator instance
-    var allocator = arena.allocator();
+    const allocator = arena.allocator();
 
     // Allocate our important heap object
     var heap_object = allocator.create(SomeImportantHeapObject);

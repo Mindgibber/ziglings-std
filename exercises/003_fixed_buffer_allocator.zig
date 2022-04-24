@@ -18,7 +18,7 @@ pub fn main() !void {
     const fba = heap.FixedBufferAllocator.init(&buffer);
 
     // Get the allocator instance
-    var allocator = fba.allocator();
+    const allocator = fba.allocator();
 
     // Allocate our important heap object
     var heap_object = allocator.create(SomeImportantHeapObject);

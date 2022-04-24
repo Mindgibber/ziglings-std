@@ -13,7 +13,7 @@ pub fn main() !void {
     const pa = heap.page_allocator;
 
     // Get the allocator instance
-    var allocator = pa.allocator();
+    const allocator = pa.allocator();
 
     // Allocate our important heap object
     var heap_object = allocator.create(SomeImportantHeapObject);

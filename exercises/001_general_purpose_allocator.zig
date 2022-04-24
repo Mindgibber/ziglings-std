@@ -30,7 +30,7 @@ pub fn main() !void {
     const gpa = heap.GeneralPurposeAllocator(.{}){};
 
     // Get the allocator instance
-    var allocator = gpa.allocator();
+    const allocator = gpa.allocator();
 
     // Allocate our important heap object
     var heap_object = allocator.create(SomeImportantHeapObject);
