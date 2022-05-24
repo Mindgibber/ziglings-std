@@ -1,4 +1,4 @@
-### This repository is currently on hold, as i have no time to actually work on it as of right now. If you want to open up a PR, feel free i will review it.
+# This repository is currently on hold, as i have no time to actually work on it as of right now. If you want to open up a PR, feel free i will review it.
 
 # Ziglings-std
 
